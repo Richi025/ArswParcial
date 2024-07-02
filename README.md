@@ -3,7 +3,7 @@
 
 An application to consult the stock market of shares traded on the Stock Exchange.  The application will receive the identifier of a stock, for example “MSFT” for Microsoft, which shows the intraday, daily, weekly and monthly valuation history. For this, the free API at https://www.alphavantage.co/documentation was used.
 
-
+You can consult the following companyCompany: you can only consult with **IBM** or **MSFT** "Microsoft"
 
 ## Starting
 
@@ -76,7 +76,7 @@ http://ec2-18-212-223-177.compute-1.amazonaws.com:8080/
 ![alt text](images/imageAWS.png)
 
 
-The concurrent Test in AWS
+The concurrent Client Test in AWS
 
 ![alt text](images/imageTESTaws.png)
 
