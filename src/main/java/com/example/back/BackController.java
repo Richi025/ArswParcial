@@ -24,12 +24,13 @@ public class BackController {
     private BackService service;
     
     
-	/**
-     * 
-     * @param function 
-     * @param symbol
-     * @param interval
-     * @return
+    /**
+     * Handles GET requests to fetch market data.
+     *
+     * @param function the function to perform (EJ: TIME_SERIES_INTRADAY)
+     * @param symbol the company  symbol(eje: IBM)
+     * @param interval the time interval for the data (optional)
+     * @return the market data as a JSON string
      */
     @RequestMapping(
             value = "/mercado",

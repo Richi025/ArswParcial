@@ -9,11 +9,20 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class BackService {
+public class BackService implements BackInterface{
     private static final String USER_AGENT = "Mozilla/5.0";
     private final String MSFT_key = "demo";
     private final String api_url = "https://www.alphavantage.co/query?";
 
+
+    /**
+     * Fetches market data from the external API.
+     *
+     * @param function the function to perform (EJ: TIME_SERIES_INTRADAY)
+     * @param symbol the company  symbol(eje: IBM)
+     * @param interval the time interval for the data (optional)
+     * @return the market data as a JSON string
+     */
     public String getMercadoService(String function, String symbol, String interval){
       
         String url = api_url + "function=" + function + "&symbol=" + symbol +"&interval="+ interval + "&apikey="+ MSFT_key;

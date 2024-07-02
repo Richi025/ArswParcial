@@ -7,7 +7,11 @@ import java.net.URL;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-
+/**
+ * Represents the concurrent tests, which test the operation of the application.
+ * testSimpleRequest : Is a simple test.
+ * testConcurrency : Is test concurrent of the 10 threads.
+ */
 public class BackApplicationTests {
 
     private static final String ENDPOINT = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=1min&apikey=demo";
@@ -41,7 +45,7 @@ public class BackApplicationTests {
             e.printStackTrace(); 
         }
     }
-        // Cada hilo ejecuta una solicitud HTTP GET para obtener datos de una película específica
+    
     private static void testConcurrency() {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
 
@@ -65,7 +69,6 @@ public class BackApplicationTests {
                         response.append(inputLine); 
                     }
                     in.close();
-
                     System.out.println("Thread " + Thread.currentThread().getId() + " - Response Body : " + response.toString());
                 } catch (Exception e) {
                     e.printStackTrace(); 
